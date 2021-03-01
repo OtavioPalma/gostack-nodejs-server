@@ -29,7 +29,7 @@ usersRouter.post('/', async (request, response) => {
       updated_at: user.updated_at,
     });
   } catch (err) {
-    return response.status(400).json({ error: err.message });
+    return response.status(err.statusCode).json({ error: err.message });
   }
 });
 
@@ -55,7 +55,7 @@ usersRouter.patch(
         updated_at: user.updated_at,
       });
     } catch (err) {
-      return response.status(400).json({ error: err.message });
+      return response.status(err.statusCode).json({ error: err.message });
     }
   },
 );
