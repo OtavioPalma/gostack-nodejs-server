@@ -1,4 +1,5 @@
 import uploadConfig from '@config/upload';
+import '@shared/container';
 import AppError from '@shared/errors/AppError';
 import '@shared/infra/typeorm';
 import cors from 'cors';
