@@ -1,9 +1,9 @@
+import sessionConfig from '@config/session';
+import AppError from '@shared/errors/AppError';
 import { compare } from 'bcryptjs';
 import { sign } from 'jsonwebtoken';
 import { getRepository } from 'typeorm';
-import sessionConfig from '../config/session';
-import AppError from '../errors/AppError';
-import User from '../models/User';
+import User from '../infra/typeorm/entities/User';
 
 interface Request {
   email: string;

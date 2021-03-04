@@ -1,7 +1,7 @@
+import sessionConfig from '@config/session';
+import AppError from '@shared/errors/AppError';
 import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
-import sessionConfig from '../config/session';
-import AppError from '../errors/AppError';
 
 interface TokenPayload {
   iat: number;
