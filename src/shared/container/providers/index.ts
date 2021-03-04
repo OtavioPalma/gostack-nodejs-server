@@ -6,3 +6,8 @@ container.registerSingleton<IStorageProvider>(
   'StorageProvider',
   DiskStorageProvider,
 );
+
+// container.registerSingleton<IMailProvider>(
+//   'MailProvider',
+//   MailProvider,
+// );
