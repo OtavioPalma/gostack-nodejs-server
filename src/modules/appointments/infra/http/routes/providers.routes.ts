@@ -15,30 +15,21 @@ providersRouter.use(ensureSession);
 
 providersRouter.get('/', providersController.index);
 
-providersRouter.post(
+providersRouter.get(
   '/:provider_id/day-availability',
   celebrate({
     [Segments.PARAMS]: {
       provider_id: Joi.string().uuid().required(),
     },
-    [Segments.BODY]: {
-      day: Joi.number().required(),
-      month: Joi.number().required(),
-      year: Joi.number().required(),
-    },
   }),
   providerDayAvailabilityController.index,
 );
 
-providersRouter.post(
+providersRouter.get(
   '/:provider_id/month-availability',
   celebrate({
     [Segments.PARAMS]: {
       provider_id: Joi.string().uuid().required(),
-    },
-    [Segments.BODY]: {
-      month: Joi.number().required(),
-      year: Joi.number().required(),
     },
   }),
   providerMonthAvailabilityController.index,
