@@ -4,6 +4,7 @@ import AppError from '@shared/errors/AppError';
 import '@shared/infra/typeorm';
 import { errors } from 'celebrate';
 import cors from 'cors';
+import 'dotenv/config';
 import express, { NextFunction, Request, Response } from 'express';
 import 'express-async-errors';
 import 'reflect-metadata';
